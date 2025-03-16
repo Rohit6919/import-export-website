@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -14,42 +20,48 @@ body {
 }
 
 .navbar {
-    background-color: #f5f5f5;
-    padding: 15px 10%;
     display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-.navbar .logo {
-    font-size: 1rem;
-    font-weight: 600;
-    color: black;
-    flex:1;
-}
-
-.nav-links {
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Push nav links to right */
+    padding: 5px 20px; /* Reduced padding */
+    height: 60px; /* Set navbar height */
+    background-color: white;
+  }
+  
+  .logo-container {
+    display: flex; /* Flexbox for logo and text */
+    align-items: center; /* Align logo and text in the same line */
+    gap: 8px; /* Small gap between logo and text */
+  }
+  
+  .navbar img {
+    height: 60px; 
+    margin-top: 12px;/* Reduce logo size */
+  }
+  .navbar .logo{
+    font-weight: bolder;
+    color: #111;
+    font-size: 25px;
+    margin-top: 12px;
+  }
+  
+  .logo {
+    font-size: 20px; /* Reduce text size */
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px; 
-    flex: 1;
-    justify-content: flex-end;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    color: black;
+    gap: 20px;
+  }
+  
+  .nav-links a {
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.nav-links a:hover {
-    color: #c92534;
-}
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  
 @media (max-width: 768px) {
     .nav-links {
         display: flex;
@@ -57,6 +69,16 @@ body {
         flex: 1;
         justify-content: flex-end;
     }
+    .navbar img {
+        height: 60px; 
+        margin-top: 12px;/* Reduce logo size */
+      }
+      .navbar .logo{
+        font-weight: 600;
+        color: #111;
+        font-size: 15px;
+        margin-top: 12px;
+      }
 }
 
 /* 🔴 Hero Section */
@@ -292,6 +314,11 @@ body {
     height: auto;
     display: block;
     margin: 0 auto; /* Center the logo */
+}
+
+.navbar .logo img {
+    width: 100px;  /* Adjust as needed */
+    height: auto;  /* Keep aspect ratio */
 }
 
 /* Social media icons container */
